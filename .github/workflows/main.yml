@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Bootcamp2020-Class 2
+name: Bootcamp2020-First-React-App
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -19,21 +19,23 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2-beta
-      with: 
-        node-version: 12
 
+    # Runs a single command using the runners shell
+    - name: Installing Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 12
     - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.3.0
+      uses: Borales/actions-yarn@v2.1.0
       with:
         # Yarn command
-        cmd: install
+        cmd: install # npm install/ yarn install
     
-      -name: creating build
+    - name: Creating build
       run: yarn build
-  
-  name: Installing surge
-  run: npm install -g surge
--name: Deploying on surge
- run: surge ./build bootcamp2020createfirstreactapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      
+    # Runs a set of commands using the runners shell
+    - name: Installing Surge
+      run: npm install --global surge
+    - name: deploying using surge
+      run: surge ./build http://bootcamp2020createfirstreactapp.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
