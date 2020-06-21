@@ -1,27 +1,14 @@
 import React from 'react';
-
 function Fetch_teacher_data(props)
 {
-    return(
+  return(
     <div>
-<table>
-       <tr>
-         <th>
-           Teacher Name
-         </th>
-         <th>
-           Course
-         </th>
-         <th>
-           Subject
-         </th>
-       </tr>
-       <tr>
-           <td>{props.TName}</td>
-           <td>{props.Course}</td>
-           <td>{props.Subject}</td>
-       </tr>
-     </table>
+      <h1>Teacher Name</h1>
+      <h2>{props.TName}</h2>
+      <h1>Course</h1>
+      <h2>{props.Course}</h2>
+      <h1>Subject</h1>
+      <h2>{props.Subject}</h2>
     </div>
     );
 }
