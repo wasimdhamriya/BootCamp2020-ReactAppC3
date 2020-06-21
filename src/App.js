@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Fetch_teacher_data from './Teacher.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          I'm Wasim Dhamriya
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Fetch_teacher_data TName="Aamir Pinger" Course="Bootcamp2020" Subject="React.js"/>
+     <Fetch_teacher_data TName="Mohsin Khalid" Course="Bootcamp2020" Subject="React.js"/>
+     <Fetch_teacher_data TName="Bashir Aziz" Course="Bootcamp2020" Subject="React.js"/>
+     <Fetch_teacher_data TName="Ameen Alam" Course="Bootcamp2020" Subject="React.js"/>
     </div>
   );
 }
