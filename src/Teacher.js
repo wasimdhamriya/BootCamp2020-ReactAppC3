@@ -1,5 +1,5 @@
 import React from 'react';
-function Fetch_teacher_data(props)
+function Fetchteacherdata(props)
 {
   return(
     <div>
@@ -12,4 +12,4 @@ function Fetch_teacher_data(props)
     </div>
     );
 }
-export default Fetch_teacher_data;
+export default Fetchteacherdata;
